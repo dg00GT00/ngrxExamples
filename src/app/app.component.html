@@ -1,0 +1,8 @@
+<div style="text-align: center; font-size: 2rem;">
+    Value: {{counter$ | async}}
+    <input type="text" [(ngModel)]="newProduct">
+    <button (click)="save()">Add New Product</button>
+    <div *ngFor="let product of products$ | async">{{product.description}}
+        <button (click)="delete(product)">Delete Product</button>
+    </div>
+</div>
